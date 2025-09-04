@@ -1,0 +1,221 @@
+{
+  "app": {
+    "title": "CLICK TECH",
+    "nav": {
+      "home": "Home",
+      "business": "Business",
+      "news": "News",
+            "careers": "Careers",
+      "contact": "Contact"
+    },
+    "language": "Language",
+    "more": "+More"
+  },
+  "home": {
+    "hero": {
+      "slogan": "FLATTEN THE WORLD WITH TECHNOLOGY"
+    },
+    "vision": {
+      "title": "VISION",
+      "content": "Toward becoming the world’s largest independent third-party advertising platform,\\n\\nsupporting the production of 1,000 brands and 100,000 companies,\\n\\nand building the world’s largest international intelligence platform."
+    },
+    "solution": {
+      "title": "SOLUTION",
+      "items": {
+        "yeahmobi": {
+          "url":"https://digital.yeahmobi.com/",
+          "title": "Yeahmobi",
+          "desc": "Based on advanced ad technology and data analysis, we leverage advertising operational capabilities such as Performance Networks (DSP, Affiliate Networks, etc.). By doing so, we provide each client with services that ensure the acquisition of high-quality users and maximize advertising revenue."
+        },
+        "oversea": {
+          "url":"https://en.yeahmobi.com/",
+          "title": "Overseas Advertising Business",
+          "desc": "From smartphone games, apps, to cross-border e-commerce, we offer clients integrated one-stop services including creative production, market research, data analysis, media strategy, and implementation. We help clients expand their business overseas by providing comprehensive marketing solutions."
+        },
+        "zMaticoo": {
+          "url":"https://www.zmaticoo.com/",
+          "title": "zMaticoo",
+          "desc": "zMaticoo is a programmatic advertising platform. By utilizing advanced algorithms and AI technology, it enables real-time data-driven marketing across multiple channels. With its full-stack real-time data analysis, it provides superior advertising performance for global advertisers and mobile app developers, supporting user acquisition and higher ROI."
+        }
+      }
+    },
+    "sponsors": {
+      "title": "SPONSORS"
+    },
+    "company": {
+      "title": "Company Information",
+      "fields": {
+        "name": "Company Name",
+        "rep": "Representative",
+        "ceo": "CEO & Representative Director: Daisy Wu",
+        "est": "Established",
+        "estVal": "June 2016",
+        "capital": "Capital",
+        "capitalVal": "50 million yen",
+        "addr": "Address",
+        "addrVal": "12th Floor, Tower Building,5-8-1 Jingumae, Shibuya-ku, Tokyo",
+        "tel": "Tel: 03-6635-2718",
+        "biz": "Business Lines",
+        "bizLines": [
+          "Internet Advertising Business  ",
+          "Internet Media Business",
+          "Investment and Incubation Business"
+        ]
+      }
+    },
+    "footer": {
+      "rights": "Copyright © CLICK TECH Co., Ltd All Rights Reserved."
+    }
+  },
+  "placeholder": {
+    "updating": "Content coming soon..."
+  },
+  "business": {
+    "tabs": {
+      "marketing": "Marketing"
+    },
+    "marketing": {
+      "hero": {
+        "title": {
+          "enLine1": "Marketing",
+          "enLine2": "Services",
+          "jaSub": "Marketing services"
+        }
+      },
+      "blocks": {
+        "leftTitle": "Marketing\nServices",
+        "middleText": "We provide branding consulting mainly for Instagram, as well as Twitter, Facebook, and other social networking services.",
+        "rightText": "We support the establishment of social media branding strategies, the creation of photos and videos tailored to the target audience, and the operation of accounts. While analyzing account follower growth, user engagement, and profile/URL traffic, we implement improvement measures such as effectiveness verification and advertising optimization."
+      },
+      "categories": {
+        "title": "Service Categories",
+        "desc": "We provide a wide range of marketing services tailored to customer and product needs. By resolving challenges in the customer acquisition process, we support business growth and create new opportunities.",
+        "items": {
+          "strategy": {
+            "title": "Strategic Planning",
+            "text": "We propose multi-dimensional market analysis, strategies, and program planning to strengthen customer acquisition, product, and promotion activities."
+          },
+          "creative": {
+            "title": "Creative Design",
+            "text": "We provide localized creative ideas, content production, and timely support."
+          },
+          "media": {
+            "title": "Media Operations",
+            "text": "We manage optimal media release distribution for target audiences, in-depth purchasing insights for major platforms, and advanced tracking for ROI improvement."
+          },
+          "insights": {
+            "title": "Industry Insights",
+            "text": "We analyze market trends and data support, as well as purchasing patterns of target customers, to help identify product strengths and opportunities for improvement."
+          }
+        }
+      },
+      "coreMarket": {
+        "title": "Core Markets",
+        "desc": "We support our clients’ success by establishing bases in the Asia-Pacific region and beyond.",
+        "markers": {
+          "us": "United States",
+          "bvi": "BVI",
+          "china": "Greater China",
+          "korea": "South Korea",
+          "japan": "Japan"
+        }
+      },
+      "coreCases": {
+        "title": "Core Markets",
+        "desc": "We support our clients’ success by establishing bases in the Asia-Pacific region and beyond.",
+        "aria": {
+          "carousel": "Core market success cases carousel",
+          "slide": "slide",
+          "goto": "Go to slide {n}"
+        },
+        "items": {
+          "case1": {
+            "title": "Miracle Warmth",
+            "desc": "CPI & CPC combined with offline outdoor and TV commercial promotion made it a popular female travel app in Japan in 2017."
+          },
+          "case2": {
+            "title": "Idle Girls – Hyakka Ryoran",
+            "desc": "From pre‑registration to launch, comprehensive support, optimization advice, ad operations, and material production helped it enter the Top 10 reservation → sales ranking (excerpt)…"
+          },
+          "case3": {
+            "title": "Huel",
+            "desc": "SEO & KOL plus offline events and generational operations accelerated brand awareness growth and brand building in China."
+          },
+          "case4": {
+            "title": "Cotti Coffee",
+            "desc": "Through brand operations we established the first touchpoint with users, leveraging celebrity marketing, PR communication and social media platforms…"
+          }
+        }
+      }
+    }
+  },
+  "news": {
+    "hero": {
+      "title": "NEWS",
+      "subtitle": "NEWS"
+    },
+    "categories": {
+      "brandInnovation": "Brand Innovation",
+      "overseasMarketing": "Overseas Marketing",
+      "localizationTeam": "Localization Team"
+    },
+    "items": {
+      "award20240112": {
+        "date": "2024-03-27",
+        "title": "On January 12, 2024, the TBI Top Brand Innovation Awards ceremony was successfully held in Shanghai. Click Tech won the Silver Award in the Overseas Marketing Group for its overseas brand marketing service case with Cotti Coffee!",
+        "excerpt": "Clicktech received the Silver Award in the Overseas Marketing Group for its overseas brand marketing service case for cotti coffee...",
+        "body": "Clicktech received the Silver Award in the Overseas Marketing Group for its overseas brand marketing service case for cotti coffee. (Full content placeholder – add full English article here.)"
+      }
+    },
+    "readMore": "READ MORE",
+    "empty": "No news yet.",
+    "back": "BACK"
+  },
+  "recruit": {
+    "hero": {
+      "title": "RECRUITE",
+      "subtitle": "Recruit",
+      "imageAlt": "Recruitment hero image"
+    },
+    "status": {
+      "closedImgAlt": "We are not accepting applications at this time.",
+      "closedText": "We are not accepting applications at this time."
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "CONTACT US",
+      "subtitle": "Contact"
+    },
+    "intro": {
+      "line1": "If you have any inquiries or questions, please fill out the form below.",
+      "line2": "Our representative will get back to you shortly.",
+      "requiredNote": "Fields marked with ※ are required."
+    },
+    "fields": {
+      "name": "Name",
+      "company": "Company Name",
+      "website": "Website",
+      "email": "Email Address ",
+      "address": "Address",
+      "phone": "Phone Number",
+      "subject": "Subject of Inquiry",
+      "body": "Message"
+    },
+    "actions": {
+      "submit": "Submit"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "email": "Please enter a valid email address.",
+      "url": "Please enter a valid URL.",
+      "max": "Please enter no more than {max} characters.",
+      "fixErrors": "Please fix the highlighted errors.",
+      "bot": "Submission blocked."
+    },
+    "feedback": {
+      "success": "Your message has been sent successfully.",
+      "fail": "Failed to send. Please try again later."
+    }
+  }
+}
