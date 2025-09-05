@@ -3,10 +3,10 @@
     "title": "CLICK TECH",
     "nav": {
       "home": "Home",
-      "business": "Business",
+      "business": "About Us",
       "news": "News",
-            "careers": "Careers",
-      "contact": "Contact"
+      "careers": "Join Us",
+      "contact": "Contact Us"
     },
     "language": "Language",
     "more": "+More"
@@ -17,25 +17,25 @@
     },
     "vision": {
       "title": "VISION",
-      "content": "Toward becoming the world’s largest independent third-party advertising platform,\\n\\nsupporting the production of 1,000 brands and 100,000 companies,\\n\\nand building the world’s largest international intelligence platform."
+      "content": "We are moving toward becoming the world’s largest independent third-party advertising platform,\\n\\nsupporting 1,000 brands and 100,000 companies along the way,\\n\\nwhile building the premier global intelligence platform."
     },
     "solution": {
       "title": "SOLUTION",
       "items": {
         "yeahmobi": {
-          "url":"https://digital.yeahmobi.com/",
+          "url": "https://digital.yeahmobi.com/",
           "title": "Yeahmobi",
-          "desc": "Based on advanced ad technology and data analysis, we leverage advertising operational capabilities such as Performance Networks (DSP, Affiliate Networks, etc.). By doing so, we provide each client with services that ensure the acquisition of high-quality users and maximize advertising revenue."
+          "desc": "Powered by advanced ad technology and data analysis, we orchestrate premium Performance Network resources—DSP, Affiliate Networks—to provide end-to-end solutions that drive high-quality user acquisition and maximize advertising revenue for every client."
         },
         "oversea": {
-          "url":"https://en.yeahmobi.com/",
+          "url": "https://en.yeahmobi.com/",
           "title": "Overseas Advertising Business",
-          "desc": "From smartphone games, apps, to cross-border e-commerce, we offer clients integrated one-stop services including creative production, market research, data analysis, media strategy, and implementation. We help clients expand their business overseas by providing comprehensive marketing solutions."
+          "desc": "From mobile games and apps to cross-border e-commerce, we deliver a one-stop services that integrates creative strategy, market research, data analysis, media planning and implementation—empowering clients to expand their business overseas by providing comprehensive marketing solutions."
         },
         "zMaticoo": {
-          "url":"https://www.zmaticoo.com/",
+          "url": "https://www.zmaticoo.com/",
           "title": "zMaticoo",
-          "desc": "zMaticoo is a programmatic advertising platform. By utilizing advanced algorithms and AI technology, it enables real-time data-driven marketing across multiple channels. With its full-stack real-time data analysis, it provides superior advertising performance for global advertisers and mobile app developers, supporting user acquisition and higher ROI."
+          "desc": "zMaticoo, a programmatic advertising platform, utilizes advanced algorithms and AI to deliver real-time, omnichannel data-driven marketing.Powered by full-stack analytics, it drives superior performance, user acquisition, and ROI for global advertisers and app developers."
         }
       }
     },
@@ -57,9 +57,9 @@
         "tel": "Tel: 03-6635-2718",
         "biz": "Business Lines",
         "bizLines": [
-          "Internet Advertising Business  ",
-          "Internet Media Business",
-          "Investment and Incubation Business"
+          "Digital Advertising",
+          "Media Network ",
+          "Venture Incubation"
         ]
       }
     },
@@ -84,34 +84,34 @@
       },
       "blocks": {
         "leftTitle": "Marketing\nServices",
-        "middleText": "We provide branding consulting mainly for Instagram, as well as Twitter, Facebook, and other social networking services.",
-        "rightText": "We support the establishment of social media branding strategies, the creation of photos and videos tailored to the target audience, and the operation of accounts. While analyzing account follower growth, user engagement, and profile/URL traffic, we implement improvement measures such as effectiveness verification and advertising optimization."
+        "middleText": "We offer Instagram-led branding counsel that extends to Twitter, Facebook, and all major social platforms.",
+        "rightText": "We support the establishment of social media branding strategies, the creation of audience-matched photos and videos, and the operation of accounts. By continuously monitoring follower growth, engagement, and profile/URL traffic,we implement improvement measures such as effectiveness verification and advertising optimization."
       },
       "categories": {
         "title": "Service Categories",
-        "desc": "We provide a wide range of marketing services tailored to customer and product needs. By resolving challenges in the customer acquisition process, we support business growth and create new opportunities.",
+        "desc": "We provide diversified marketing services tailored to customer and product needs, solve business challenges throughout the sales process, and create new growth opportunities.",
         "items": {
           "strategy": {
             "title": "Strategic Planning",
-            "text": "We propose multi-dimensional market analysis, strategies, and program planning to strengthen customer acquisition, product, and promotion activities."
+            "text": "We deliver customer-centric, multi-dimensional product analysis, marketing strategy, and program planning that amplify every product launch."
           },
           "creative": {
             "title": "Creative Design",
-            "text": "We provide localized creative ideas, content production, and timely support."
+            "text": "We provide a one-stop service that turns localized creative concepts into ready-to-use assets and keeps optimizing them for peak performance."
           },
           "media": {
             "title": "Media Operations",
-            "text": "We manage optimal media release distribution for target audiences, in-depth purchasing insights for major platforms, and advanced tracking for ROI improvement."
+            "text": "We secure premium inventory in your target markets, forge long-term partnerships with top-tier media, and deliver rapid onboarding and efficient management to maximize ROI."
           },
           "insights": {
             "title": "Industry Insights",
-            "text": "We analyze market trends and data support, as well as purchasing patterns of target customers, to help identify product strengths and opportunities for improvement."
+            "text": "We combine deep-dive market research with real-time data to map target-industry landscapes and accurately identify product competitiveness."
           }
         }
       },
       "coreMarket": {
         "title": "Core Markets",
-        "desc": "We support our clients’ success by establishing bases in the Asia-Pacific region and beyond.",
+        "desc": "We are rooted in Asia-Pacific, propelling brands to global prominence.",
         "markers": {
           "us": "United States",
           "bvi": "BVI",
@@ -122,7 +122,7 @@
       },
       "coreCases": {
         "title": "Core Markets",
-        "desc": "We support our clients’ success by establishing bases in the Asia-Pacific region and beyond.",
+        "desc": "We are APAC-focused, powering brands’ global expansion.",
         "aria": {
           "carousel": "Core market success cases carousel",
           "slide": "slide",
@@ -130,20 +130,20 @@
         },
         "items": {
           "case1": {
-            "title": "Miracle Warmth",
-            "desc": "CPI & CPC combined with offline outdoor and TV commercial promotion made it a popular female travel app in Japan in 2017."
+            "title": "奇跡の暖かさ",
+            "desc": "CPIとCPCは、オフラインでの屋外およびテレビコマーシャルプロモーションと組み合わされ、2017年に日本で人気のある女性旅行者になりました。"
           },
           "case2": {
-            "title": "Idle Girls – Hyakka Ryoran",
-            "desc": "From pre‑registration to launch, comprehensive support, optimization advice, ad operations, and material production helped it enter the Top 10 reservation → sales ranking (excerpt)…"
+            "title": "放置少女〜百花繚乱の萌姫たち〜",
+            "desc": "予約から製品への売れ行きの良いリストTop10に入るために、全体的なサポート、最適化のアドバイス、広告業務、材料生産およびサポートの他の……"
           },
           "case3": {
             "title": "Huel",
-            "desc": "SEO & KOL plus offline events and generational operations accelerated brand awareness growth and brand building in China."
+            "desc": "SEO＆KOLは、オフラインの活動と世代別の操作を組み合わせて、Huelの迅速な認知度の向上と中国でのブランドの構築を支援します。"
           },
           "case4": {
             "title": "Cotti Coffee",
-            "desc": "Through brand operations we established the first touchpoint with users, leveraging celebrity marketing, PR communication and social media platforms…"
+            "desc": "ブランド運営を通じてブランドとユーザーの最初のつながりを行い、セレブマーケティング、PRコミュニケーション、ソーシャルメディアプラットフォーム……"
           }
         }
       }
@@ -162,9 +162,9 @@
     "items": {
       "award20240112": {
         "date": "2024-03-27",
-        "title": "On January 12, 2024, the TBI Top Brand Innovation Awards ceremony was successfully held in Shanghai. Click Tech won the Silver Award in the Overseas Marketing Group for its overseas brand marketing service case with Cotti Coffee!",
-        "excerpt": "Clicktech received the Silver Award in the Overseas Marketing Group for its overseas brand marketing service case for cotti coffee...",
-        "body": "Clicktech received the Silver Award in the Overseas Marketing Group for its overseas brand marketing service case for cotti coffee. (Full content placeholder – add full English article here.)"
+        "title": "On January 12, 2024, the TBI Top Brand Innovation Awards ceremony concluded successfully in Shanghai. Click Tech’s overseas marketing campaign for Cotti Coffee was honored with the Silver Prize in the Overseas Marketing category.",
+        "excerpt": "クリックテックは、cotti coffee の海外ブランドマーケティングサービス事例で海外マーケティンググループ銀賞を受賞しました...",
+        "body": "クリックテックは、cotti coffee の海外ブランドマーケティングサービス事例で海外マーケティンググループ銀賞を受賞しました。（本文フルテキストはここに追加してください）"
       }
     },
     "readMore": "READ MORE",
@@ -178,8 +178,8 @@
       "imageAlt": "Recruitment hero image"
     },
     "status": {
-      "closedImgAlt": "We are not accepting applications at this time.",
-      "closedText": "We are not accepting applications at this time."
+      "closedImgAlt": "No open positions at this time.",
+      "closedText": "No open positions at this time."
     }
   },
   "contact": {
@@ -188,18 +188,18 @@
       "subtitle": "Contact"
     },
     "intro": {
-      "line1": "If you have any inquiries or questions, please fill out the form below.",
-      "line2": "Our representative will get back to you shortly.",
-      "requiredNote": "Fields marked with ※ are required."
+      "line1": "For inquiries or partnership opportunities, please complete the form below.",
+      "line2": "Our team will respond within 1–2 business days.",
+      "requiredNote": "Fields marked ※ are required."
     },
     "fields": {
       "name": "Name",
       "company": "Company Name",
       "website": "Website",
-      "email": "Email Address ",
+      "email": "Email",
       "address": "Address",
       "phone": "Phone Number",
-      "subject": "Subject of Inquiry",
+      "subject": "Inquiry Details",
       "body": "Message"
     },
     "actions": {
