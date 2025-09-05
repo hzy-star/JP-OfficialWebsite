@@ -19,7 +19,7 @@ mkdir -p /docker/log
 cd /dianyi/app/jp-official/
 tar -zxf /root/jp-official.tar.gz --strip-components=1
 
-sed -i "s/<NEW_API_ADDR>/$NEW_API_ADDR/g" /etc/nginx/conf.d/manage.ym.conf
+# sed -i "s/<NEW_API_ADDR>/$NEW_API_ADDR/g" /etc/nginx/conf.d/manage.ym.conf
 # init log file
 /bin/bash /root/ypp_log_init.sh
 
