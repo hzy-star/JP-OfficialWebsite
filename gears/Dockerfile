@@ -1,4 +1,4 @@
-FROM 172.30.10.185:15000/cd-build/node-nginx:22-v2
+FROM 172.30.10.185:15000/cd-build/node-nginx22:1.0
 # 安装 gettext 包，提供 envsubst 命令
 RUN apt-get update && apt-get install -y gettext-base && rm -rf /var/lib/apt/lists/*
 
