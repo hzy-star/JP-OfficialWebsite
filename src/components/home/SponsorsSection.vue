@@ -9,9 +9,9 @@
         loading="lazy"
       />
       <!-- 若想直接用超大淡色文字而不是图片，把上面 <img> 去掉并使用下面这个文本块 -->
-      <div class="ghost-text" aria-hidden="true">
+      <!-- <div class="ghost-text" aria-hidden="true">
         <span v-for="(ch,i) in ghostWords" :key="i">{{ ch }}</span>
-      </div>
+      </div> -->
     </div>
 
     <!-- 右侧内容 -->
@@ -45,51 +45,52 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
+// 左侧装饰图片（注意空格需要编码：Group%2010.png）
+import leftDecorSrc from '@/assets/img/leftDecorSrc.png';
 
 /**
  * 说明：
- * - 截图里标题似乎拼成 “PARNTER”，如果想改回英文正确 “PARTNER”，改下面 titleText 逻辑即可。
+ * - 截图里标题似乎拼成 “PARTNER”，如果想改回英文正确 “PARTNER”，改下面 titleText 逻辑即可。
  * - 左侧给了一个图片 URL（含空格），需要做 encode。
  */
 
 const { t, locale } = useI18n();
 
-// 左侧装饰图片（注意空格需要编码：Group%2010.png）
-const leftDecorSrc = 'http://www.clicktech.jp/static/style/pc/images/Group%2010.png';
 
 // 大背景淡字（如果使用图片就不一定需要；保留做可选）
-const ghostWords = 'Our Best Partners'.split('');
+// const ghostWords = 'Our Best Partners'.split('');
 
-// 标题：如果你确定要保留“PARNTER”原始拼写，就写死；否则可根据语言切换
+// 标题：如果你确定要保留“PARTNER”原始拼写，就写死；否则可根据语言切换
 const titleText = computed(() => {
-  // 也可以：return locale.value === 'ja' ? 'PARNTER' : 'PARTNER';
-  return 'PARNTER';
+  // 也可以：return locale.value === 'ja' ? 'PARTNER' : 'PARTNER';
+  return 'PARTNER';
 });
+// 右侧 logo 列表（改为使用本地 assets）
+// 匹配 /src/assets/img 目录下：PARTNER1-1.jpg、1-2.png、…、4-3.webp
+type ImgUrl = string;
+const allImgs = import.meta.glob('/src/assets/img/PARTNER/*.{png,jpg,jpeg,webp,svg}', {
+  eager: true,
+  import: 'default'
+}) as Record<string, ImgUrl>;
 
-// 右侧 logo 列表
-const base = 'http://www.clicktech.jp';
-const rawList = [
-  'http://www.clicktech.jp/uploadfile/202404/5e673ceaf1c5357.jpg',
-  'http://www.clicktech.jp/uploadfile/202404/b5671b1b81ad167.jpg',
-  'http://www.clicktech.jp/uploadfile/202404/158c4e316b15.jpg',
-  'http://www.clicktech.jp/uploadfile/202404/734c8d8c8ee1ab9.jpg',
-  'http://www.clicktech.jp/uploadfile/202404/da637340d8bb4.jpg',
-  '/uploadfile/202404/ad839d234b9310e.jpg',
-  '/uploadfile/202404/8d17411f472ff63.jpg',
-  '/uploadfile/202404/9f35c9f3ec2b5fe.jpg',
-  '/uploadfile/202404/897f30f16fd0c.jpg',
-  '/uploadfile/202404/ad67ce34a6500af.jpg',
-  '/uploadfile/202404/fd1cbd350b2cc.jpg',
-  '/uploadfile/202404/c74133ac1faaa37.jpg'
-];
+// 只要文件名符合 (PARTNER)?<行数>-<列数>，就收集并按行、列排序：1-1,1-2,1-3,2-1,...,4-3
+const entries = Object.entries(allImgs)
+  .filter(([p]) => /(?:PARTNER)?\d+-\d+\.(?:png|jpe?g|webp|svg)$/i.test(p))
+  .sort(([aPath], [bPath]) => {
+    const a = aPath.split('/').pop() || '';
+    const b = bPath.split('/').pop() || '';
+    const ma = a.match(/(?:PARTNER)?(\d+)-(\d+)/i);
+    const mb = b.match(/(?:PARTNER)?(\d+)-(\d+)/i);
+    if (!ma || !mb) return a.localeCompare(b);
+    const [ar, ac] = [parseInt(ma[1], 10), parseInt(ma[2], 10)];
+    const [br, bc] = [parseInt(mb[1], 10), parseInt(mb[2], 10)];
+    return ar === br ? ac - bc : ar - br;
+  });
 
-const logos = rawList.map((u, i) => {
-  const absolute = u.startsWith('http') ? u : base + u;
-  return {
-    src: absolute,
-    alt: '' // 可后续补真实伙伴名称
-  };
-});
+const logos = entries.map(([, url], i) => ({
+  src: url,
+  alt: '' // 可按需补真实名称
+}));
 
 // 图片加载失败时（防止 404），可替换成透明占位或本地默认图
 function onImgError(e: Event) {
@@ -132,7 +133,7 @@ $grid-gap-y: 3.4rem;
   max-width: 100%;
   max-height: 78%;
   object-fit: contain;
-  opacity: 0.2;
+  opacity: 0.8;
   mix-blend-mode: normal;
   pointer-events: none;
   user-select: none;
@@ -284,7 +285,7 @@ $grid-gap-y: 3.4rem;
   }
   .decor-image {
     max-width: 75%;
-    opacity: 0.18;
+    opacity: 0.8;
   }
   .ghost-text {
     font-size: clamp(2.6rem, 15vw, 4rem);

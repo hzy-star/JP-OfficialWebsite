@@ -46,7 +46,8 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-
+import join_img from '@/assets/img/join_img.png'
+import stoprecruite from '@/assets/img/stoprecruite.png'
 const { t } = useI18n();
 
 /**
@@ -58,8 +59,8 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  heroImage: 'http://www.clicktech.jp/uploadfile/202403/1ef27a7077b10e1.png',
-  closedImage: 'http://www.clicktech.jp/static/style/pc/images/stoprecruite.png'
+  heroImage: join_img,
+  closedImage: stoprecruite
 });
 
 const heroImage = props.heroImage;

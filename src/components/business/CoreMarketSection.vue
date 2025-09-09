@@ -54,10 +54,10 @@
  */
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useI18n } from 'vue-i18n';
+import mapSrc from '@/assets/img/buju_map.png'
 
 const { t } = useI18n();
 
-const mapSrc = 'http://www.clicktech.jp/static/style/pc/images/buju_map.png';
 
 interface MarkerDef {
   key: string;

@@ -50,6 +50,10 @@
  */
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useI18n } from 'vue-i18n';
+import iconStrategy from '@/assets/img/svg/strategy.svg';
+import iconCreative from '@/assets/img/svg/creative.svg';
+import iconMedia from '@/assets/img/svg/media.svg';
+import iconInsights from '@/assets/img/svg/insights.svg';
 
 const { t } = useI18n();
 
@@ -61,30 +65,10 @@ interface CategoryItem {
 }
 
 const items: CategoryItem[] = [
-  {
-    key: 'strategy',
-    icon: 'http://www.clicktech.jp/static/style/pc/images/icon_strategy.svg',
-    titleKey: 'business.marketing.categories.items.strategy.title',
-    textKey: 'business.marketing.categories.items.strategy.text'
-  },
-  {
-    key: 'creative',
-    icon: 'http://www.clicktech.jp/static/style/pc/images/icon_creative.svg',
-    titleKey: 'business.marketing.categories.items.creative.title',
-    textKey: 'business.marketing.categories.items.creative.text'
-  },
-  {
-    key: 'media',
-    icon: 'http://www.clicktech.jp/static/style/pc/images/icon_media.svg',
-    titleKey: 'business.marketing.categories.items.media.title',
-    textKey: 'business.marketing.categories.items.media.text'
-  },
-  {
-    key: 'insights',
-    icon: 'http://www.clicktech.jp/static/style/pc/images/icon_insights.svg',
-    titleKey: 'business.marketing.categories.items.insights.title',
-    textKey: 'business.marketing.categories.items.insights.text'
-  }
+  { key: 'strategy', icon: iconStrategy, titleKey: 'business.marketing.categories.items.strategy.title', textKey: 'business.marketing.categories.items.strategy.text' },
+  { key: 'creative', icon: iconCreative, titleKey: 'business.marketing.categories.items.creative.title', textKey: 'business.marketing.categories.items.creative.text' },
+  { key: 'media', icon: iconMedia, titleKey: 'business.marketing.categories.items.media.title', textKey: 'business.marketing.categories.items.media.text' },
+  { key: 'insights', icon: iconInsights, titleKey: 'business.marketing.categories.items.insights.title', textKey: 'business.marketing.categories.items.insights.text' }
 ];
 
 const rootEl = ref<HTMLElement | null>(null);

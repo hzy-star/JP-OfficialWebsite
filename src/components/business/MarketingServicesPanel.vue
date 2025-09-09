@@ -49,10 +49,9 @@ import { useI18n } from 'vue-i18n';
 import ServiceCategoriesSection from './ServiceCategoriesSection.vue';
 import CoreMarketSection from './CoreMarketSection.vue';
 import CoreMarketCasesCarousel from './CoreMarketCasesCarousel.vue';
-
+import imgSrc from '@/assets/img/about_img.png'
 const { t } = useI18n();
 
-const imgSrc = 'http://www.clicktech.jp/uploadfile/202403/1f0b9f3fb580c35.png';
 
 interface ColDef {
     key: string;

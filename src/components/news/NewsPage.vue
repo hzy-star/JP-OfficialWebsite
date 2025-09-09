@@ -129,6 +129,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
+import news1 from '@/assets/img/news1.jpg'
 
 const { t, locale } = useI18n();
 
@@ -146,7 +147,7 @@ interface NewsRecord {
 const items: NewsRecord[] = [
   {
     id: 'award-20240112',
-    image: 'http://www.clicktech.jp/uploadfile/202403/cdc90958b4aea58.jpg',
+    image: news1,
     dateKey: 'news.items.award20240112.date',
     titleKey: 'news.items.award20240112.title',
     excerptKey: 'news.items.award20240112.excerpt',
@@ -257,6 +258,8 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
+@use 'sass:color';
+
 $hero-bg: #f3f5fa;
 $title-color: #272a2f;
 $sub-color: #41474d;
@@ -357,7 +360,13 @@ $detail-text-max: 980px;
   left: 0; bottom: 0;
   height: var(--line-height);
   width: 100%;
-  background: linear-gradient(90deg, $accent 0%, lighten($accent, 6%) 70%, $accent 100%);
+  background: linear-gradient(
+    90deg,
+    $accent 0%,
+    /* 替换 lighten -> color.adjust */
+    color.adjust($accent, $lightness: 6%) 70%,
+    $accent 100%
+  );
   transform: scaleX(0);
   transform-origin: left;
   pointer-events: none;
@@ -446,7 +455,8 @@ $detail-text-max: 980px;
   transition: color .3s;
 }
 .read-more .chevron { font-size: .95rem; line-height: 1; transform: translateY(1px); }
-.read-more:hover { color: darken($accent, 8%); text-decoration: underline; }
+/* 替换 darken -> color.adjust */
+.read-more:hover { color: color.adjust($accent, $lightness: -8%); text-decoration: underline; }
 
 .empty {
   text-align: center;

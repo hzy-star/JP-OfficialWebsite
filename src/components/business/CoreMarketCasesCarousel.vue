@@ -47,6 +47,10 @@ import { Autoplay, Navigation, Pagination, A11y } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import core1 from '@/assets/img/core-1.jpg'
+import core2 from '@/assets/img/core-2.jpg'
+import core3 from '@/assets/img/core-3.jpg'
+import core4 from '@/assets/img/core-4.jpg'
 
 const { t } = useI18n();
 
@@ -96,25 +100,25 @@ const emit = defineEmits<{
 const items: CaseItem[] = [
     {
         key: 'case1',
-        image: 'http://www.clicktech.jp/uploadfile/202403/5ada3b88908f2af.jpg',
+        image: core1,
         titleKey: 'business.marketing.coreCases.items.case1.title',
         descKey: 'business.marketing.coreCases.items.case1.desc'
     },
     {
         key: 'case2',
-        image: 'http://www.clicktech.jp/uploadfile/202403/96c00f27b3ba79a.jpg',
+        image: core2,
         titleKey: 'business.marketing.coreCases.items.case2.title',
         descKey: 'business.marketing.coreCases.items.case2.desc'
     },
     {
         key: 'case3',
-        image: 'http://www.clicktech.jp/uploadfile/202403/24b7e71521b3230.jpg',
+        image: core3,
         titleKey: 'business.marketing.coreCases.items.case3.title',
         descKey: 'business.marketing.coreCases.items.case3.desc'
     },
     {
         key: 'case4',
-        image: 'http://www.clicktech.jp/uploadfile/202403/7cc71b8367d9b12.jpg',
+        image: core4,
         titleKey: 'business.marketing.coreCases.items.case4.title',
         descKey: 'business.marketing.coreCases.items.case4.desc'
     }

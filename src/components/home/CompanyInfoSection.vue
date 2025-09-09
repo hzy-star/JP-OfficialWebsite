@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import { computed, ref, onMounted, nextTick, watch } from 'vue';
+import { computed, ref, onMounted, nextTick, watch, onBeforeUnmount } from 'vue';
 
 const { t, tm, locale } = useI18n();
 
@@ -102,37 +102,22 @@ function measureLabelWidth() {
 
     // 写入 CSS 变量
     el.style.setProperty('--label-width', finalWidth + 'px');
-
-    // （可选）光学微调：如果 value 宽度远大于 label，可右移一点
-    const grid = el.querySelector<HTMLElement>('.info-grid');
-    if (grid) {
-      const valueCells = el.querySelectorAll<HTMLElement>('.info-value');
-      let maxValueWidth = 0;
-      valueCells.forEach(v => {
-        const w = v.offsetWidth;
-        if (w > maxValueWidth) maxValueWidth = w;
-      });
-      // 比例差异
-      const ratio = maxValueWidth / finalWidth;
-      let shift = 0;
-      if (ratio > 2.2) {
-        shift = 4; // 轻微右移
-      }
-      if (ratio > 3.2) {
-        shift = 6;
-      }
-      el.style.setProperty('--optical-shift', shift + 'px');
-    }
   });
 }
 
 onMounted(() => {
   measureLabelWidth();
+  // 视口变化时重新测量，保证自适应
+  window.addEventListener('resize', measureLabelWidth, { passive: true });
 });
 
 // 监听语言与数据变化
 watch([locale, rows], () => {
   measureLabelWidth();
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', measureLabelWidth);
 });
 </script>
 
@@ -191,14 +176,13 @@ $max-total-width: 920px; /* 信息块最大整体宽度（含两列与间距） 
 .info-wrapper {
   --label-width: 140px;      /* 初始值，后面 JS 会覆盖 */
   --col-gap: 3rem;
-  --optical-shift: 0px;
   width: 100%;
   display: flex;
   justify-content: center;
-  transform: translateX(var(--optical-shift));
-  /* 限制最大宽度以避免超宽 */
+  /* 居中与限制最大宽度 */
   max-width: $max-total-width;
   padding: 0;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
@@ -208,8 +192,9 @@ $max-total-width: 920px; /* 信息块最大整体宽度（含两列与间距） 
   column-gap: var(--col-gap);
   row-gap: 1.55rem;
   width: auto;
-  /* 让网格宽度自动由内容决定并居中 */
+  /* 内部内容也水平居中（适配多语言长度变化） */
   justify-content: center;
+  align-items: start;
 }
 
 .info-row {
@@ -218,7 +203,7 @@ $max-total-width: 920px; /* 信息块最大整体宽度（含两列与间距） 
 
 .info-label {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 600;
   color: $label-color;
   letter-spacing: 0.08em;
   line-height: 1.75;
@@ -277,17 +262,27 @@ $max-total-width: 920px; /* 信息块最大整体宽度（含两列与间距） 
     font-size: 2.15rem;
   }
   .info-wrapper {
-    --col-gap: 1.6rem;
+    --col-gap: 1.2rem;
+    margin: 0 auto;
   }
   .info-grid {
     row-gap: 1.15rem;
+    /* 移动端可切换为单列堆叠也能居中显示 */
+    grid-template-columns: 1fr;
+    justify-items: center; /* 单列时居中每个单元 */
   }
   .info-label {
     font-size: 0.94rem;
+    text-align: center; /* 单列时标签居中 */
+    font-weight: 600;
+    color: #1f2329;
+    opacity: 0.9;
   }
   .info-value {
     font-size: 0.98rem;
     max-width: 100%;
+    text-align: center; /* 单列时值居中 */
+    opacity: 0.85;
   }
 }
 
