@@ -233,6 +233,16 @@ $vision-line-height: 1.75;
   }
 }
 
+/* 新增：手机端取消 100vh，顶部对齐并收紧内边距，去掉多余空白 */
+@media (max-width: 768px) {
+  .full-height-vision {
+    min-height: auto;
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+}
+
 @media (max-width: 520px) {
   .with-accent { padding-left: 72px; }
   .accent-block { width: 54px; height: 54px; }
@@ -248,9 +258,12 @@ $vision-line-height: 1.75;
     bottom: -26px;
   }
 
+  /* 520 以下继续保持去 100vh 与紧凑内边距 */
   .full-height-vision {
-    padding-top: 80px;
-    padding-bottom: 40px;
+    min-height: auto;
+    align-items: flex-start;
+    padding-top: 32px;
+    padding-bottom: 28px;
   }
 }
 </style>
